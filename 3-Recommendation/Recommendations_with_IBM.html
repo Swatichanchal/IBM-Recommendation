@@ -13077,16 +13077,12 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Recommendations-with-IBM">Recommendations with IBM<a class="anchor-link" href="#Recommendations-with-IBM">&#182;</a></h1><p>In this notebook, you will be putting your recommendation skills to use on real data from the IBM Watson Studio platform.</p>
-<p>You may either submit your notebook through the workspace here, or you may work from your local machine and submit through the next page.  Either way assure that your code passes the project <a href="https://review.udacity.com/#!/rubrics/2322/view">RUBRIC</a>.  <strong>Please save regularly.</strong></p>
-<p>By following the table of contents, you will build out a number of different methods for making recommendations that can be used for different situations.</p>
-<h2 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents">&#182;</a></h2><p>I. <a href="#Exploratory-Data-Analysis">Exploratory Data Analysis</a><br>
+<h1 id="Recommendations-with-IBM">Recommendations with IBM<a class="anchor-link" href="#Recommendations-with-IBM">&#182;</a></h1><h2 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents">&#182;</a></h2><p>I. <a href="#Exploratory-Data-Analysis">Exploratory Data Analysis</a><br>
 II. <a href="#Rank">Rank Based Recommendations</a><br>
 III. <a href="#User-User">User-User Based Collaborative Filtering</a><br>
 IV. <a href="#Content-Recs">Content Based Recommendations (EXTRA - NOT REQUIRED)</a><br>
 V. <a href="#Matrix-Fact">Matrix Factorization</a><br>
 VI. <a href="#conclusions">Extras &amp; Concluding</a></p>
-<p>At the end of the notebook, you will find directions for how to submit your work.  Let's get started by importing the necessary libraries and reading in the data.</p>
 
 </div>
 </div>
@@ -14623,8 +14619,7 @@ Name: article_id, Length: 714, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Part-II:-Rank-Based-Recommendations"><a class="anchor" id="Rank">Part II: Rank-Based Recommendations</a><a class="anchor-link" href="#Part-II:-Rank-Based-Recommendations">&#182;</a></h3><p>Unlike in the earlier lessons, we don't actually have ratings for whether a user liked an article or not.  We only know that a user has interacted with an article.  In these cases, the popularity of an article can really only be based on how often an article was interacted with.</p>
-<p><code>1.</code> Fill in the function below to return the <strong>n</strong> top articles ordered with most interactions as the top. Test your function using the tests below.</p>
+<h3 id="Part-II:-Rank-Based-Recommendations"><a class="anchor" id="Rank">Part II: Rank-Based Recommendations</a><a class="anchor-link" href="#Part-II:-Rank-Based-Recommendations">&#182;</a></h3><p><code>1.</code> Fill in the function below to return the <strong>n</strong> top articles ordered with most interactions as the top. Test your function using the tests below.</p>
 
 </div>
 </div>
@@ -16750,7 +16745,7 @@ The top 10 recommendations for user 20 are the following article names:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Provide your response here.</strong></p>
+<p><strong>If we were given a new user , we can give recommendation on the basis popular articles as we don't have any prior knowledge about the user so get_top_article_ids can be applied .</strong></p>
 
 </div>
 </div>
@@ -17084,7 +17079,7 @@ The top 10 recommendations for user 20 are the following article names:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Provide your response here.</strong></p>
+<p><strong>Here matrice are fully filled, so we can use SVD but if we were having a sparse matrix with lots of Null values then this would not be possible and we would need to use Funk SVD instead..</strong></p>
 
 </div>
 </div>
@@ -17653,22 +17648,6 @@ The top 10 recommendations for user 20 are the following article names:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a id='conclusions'></a></p>
-<h3 id="Extras">Extras<a class="anchor-link" href="#Extras">&#182;</a></h3><p>Using your workbook, you could now save your recommendations for each user, develop a class to make new predictions and update your results, and make a flask app to deploy your results.  These tasks are beyond what is required for this project.  However, from what you learned in the lessons, you certainly capable of taking these tasks on to improve upon your work here!</p>
-<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2><blockquote><p>Congratulations!  You have reached the end of the Recommendations with IBM project!</p>
-<p><strong>Tip</strong>: Once you are satisfied with your work here, check over your report to make sure that it is satisfies all the areas of the <a href="https://review.udacity.com/#!/rubrics/2322/view">rubric</a>. You should also probably remove all of the "Tips" like this one so that the presentation is as polished as possible.</p>
-</blockquote>
-<h2 id="Directions-to-Submit">Directions to Submit<a class="anchor-link" href="#Directions-to-Submit">&#182;</a></h2><blockquote><p>Before you submit your project, you need to create a .html or .pdf version of this notebook in the workspace here. To do that, run the code cell below. If it worked correctly, you should get a return code of 0, and you should see the generated .html file in the workspace directory (click on the orange Jupyter icon in the upper left).</p>
-<p>Alternatively, you can download this report as .html via the <strong>File</strong> &gt; <strong>Download as</strong> submenu, and then manually upload it into the workspace directory by clicking on the orange Jupyter icon in the upper left, then using the Upload button.</p>
-<p>Once you've done this, you can submit your project by clicking on the "Submit Project" button in the lower right here. This will create and submit a zip file with this .ipynb doc and the .html or .pdf version you created. Congratulations!</p>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="References-for-this-project-:">References for this project :<a class="anchor-link" href="#References-for-this-project-:">&#182;</a></h1><ul>
 <li><a href="https://www.geeksforgeeks.org/matplotlib-pyplot-xlim-in-python/">https://www.geeksforgeeks.org/matplotlib-pyplot-xlim-in-python/</a></li>
 <li><a href="https://numpy.org/doc/stable/reference/generated/numpy.where.html">https://numpy.org/doc/stable/reference/generated/numpy.where.html</a></li>
@@ -17685,7 +17664,7 @@ The top 10 recommendations for user 20 are the following article names:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[537]:</div>
+<div class="prompt input_prompt">In&nbsp;[538]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">call</span>
@@ -17702,7 +17681,7 @@ The top 10 recommendations for user 20 are the following article names:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[537]:</div>
+    <div class="prompt output_prompt">Out[538]:</div>
 
 
 
